@@ -2,6 +2,11 @@
 Prepares the basic wrap and style of the website such as background colour, text colour, 
 and the overall width of the website with Margins and bounding box.
 */
+dt::after
+{
+   content:":"; 
+}
+
 *{
     box-sizing: border-box;
 }
@@ -80,6 +85,8 @@ header li:hover{
     border-top: 4px solid hotpink;
 }
 
+
+
 /*
 Table values and settings
 */
@@ -98,6 +105,10 @@ tbody tr:nth-child(even){
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/*
+survey CSS.
+*/
+
 [type="radio"]{
     display: list-item;
 }
@@ -106,7 +117,6 @@ label{
     display: table;
 }
 
-
 [type="submit"]{
     border: none;
     padding: 1em 3em 1em 3em;
@@ -114,3 +124,10 @@ label{
     color: cornflowerblue;
 }
 
+ul{
+    display: block;
+}
+
+input:invalid{
+    background-color: red;
+}
