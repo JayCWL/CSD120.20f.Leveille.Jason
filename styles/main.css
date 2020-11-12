@@ -7,7 +7,7 @@ dt::after
    content:":"; 
 }
 
-*{
+html {
     box-sizing: border-box;
 }
 *,
@@ -23,7 +23,7 @@ body{
 .width-wrap{
     color: rgb(200, 200, 200);
     background-color: rgb(75, 93, 122);
-    width: 960px;
+    max-width: 960px;
     margin: auto;
     padding: 0 2em 2em 2em; 
     border: solid rgba(0, 0, 0, 0.3);
@@ -32,7 +32,7 @@ body{
 }
 
 ::selection{
-    color:rgb(226, 13, 155)
+    background-color:rgb(226, 13, 155)
 }
 
 /*
@@ -41,7 +41,9 @@ sets the footer styling with the dashed line, margins and width
 hr{
     max-width: 890px;
     min-width: 300px;
+    width: 50vw;
     margin: 3em 0em 2em 0em;
+    border: none;
     border-bottom: dotted 3px rgb(200, 200, 200);
 }
 
@@ -64,44 +66,60 @@ header a, a:link, main a{
 }
 
 header{
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
     border-top: 4px solid rgb(0, 0, 0, 0.1);
     margin-left: -2em;
     margin-right: -2em;
 }
 
+header nav {
+    margin-left: 2em;
+    margin-right: 2em;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
 header li{
     display: inline;
-    margin: .5em;
-    padding: 0;
+}
+
+header li a {
+    display: inline-block;
+    margin: -4px 1em 0;
+    padding: 1em 0 0.5em;
     border-top: 4px solid transparent;
 }
 
-ul{
-    display: flex;
-}
-
-header li:hover{
+header li a:hover{
     border-top: 4px solid hotpink;
 }
-
 
 
 /*
 Table values and settings
 */
 
-table, thead{
+td, th {
     color: black;
     padding: 0.3em 1em 0.3em 1em;
-    background-color: rgba(255, 255, 255, 0.5)
 }
 
-thead, tfoot, tbody th{
+thead th,
+thead td,
+tfoot th,
+tfoot td, 
+tbody th {
     background-color: rgba(255, 255, 255, 0.2)
 }
 
-tbody tr:nth-child(even){
+tbody td {
+    background-color: rgba(255, 255, 255, 0.05)
+}
+
+tbody tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -109,12 +127,12 @@ tbody tr:nth-child(even){
 survey CSS.
 */
 
-[type="radio"]{
-    display: list-item;
-}
-
 label{
-    display: table;
+    display: block;
+}
+input[type="radio"] ~ label,
+input[type="checkbox"] ~ label {
+    display: inline;
 }
 
 [type="submit"]{
@@ -122,10 +140,6 @@ label{
     padding: 1em 3em 1em 3em;
     background-color: brown;
     color: cornflowerblue;
-}
-
-ul{
-    display: block;
 }
 
 input:invalid{
