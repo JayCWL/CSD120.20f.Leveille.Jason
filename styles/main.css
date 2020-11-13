@@ -87,10 +87,14 @@ header li{
 }
 
 header li a {
+    text-decoration: none;
+    text-transform: uppercase;
     display: inline-block;
     margin: -4px 1em 0;
     padding: 1em 0 0.5em;
     border-top: 4px solid transparent;
+    font-weight: bold;
+    letter-spacing: 4px;
 }
 
 header li a:hover{
