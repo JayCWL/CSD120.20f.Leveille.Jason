@@ -71,6 +71,11 @@ body a:hover{
 /*
 sets the footer styling with the dashed line, margins and width
 */
+footer{
+    font-size: 75%;
+    text-align: center;
+}
+
 hr{
     max-width: 890px;
     min-width: 300px;
@@ -78,6 +83,11 @@ hr{
     margin: 3em 0em 2em 0em;
     border: none;
     border-bottom: dotted 3px rgb(200, 200, 200);
+}
+
+title{
+    text-shadow: 5px 5px 5px blueviolet;
+    text-decoration: none;
 }
 
 /*
