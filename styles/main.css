@@ -45,6 +45,10 @@ image{
     max-width: 100%;
 }
 
+body{
+    line-height: 1.3;
+}
+
 body a{
     text-decoration: none;
 }
@@ -68,6 +72,11 @@ body a:hover{
     box-shadow: 1px 1px 1px blueviolet;
 }
 
+
+iframe{
+    border-radius: 2em 2em;
+}
+
 /*
 sets the footer styling with the dashed line, margins and width
 */
@@ -89,6 +98,7 @@ title{
     text-shadow: 5px 5px 5px blueviolet;
     text-decoration: none;
 }
+
 
 /*
 Header style, Sets headers to inline and link effects such as colour and hover effects.
@@ -207,4 +217,22 @@ input:invalid{
 
 input[type="radio"] ~li{
     list-style: none;
+    padding: 0%;
+}
+
+/*
+font styles
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Libre BaskerVille';
+}
+
+body{
+    font-family: 'Space Mono';
 }
