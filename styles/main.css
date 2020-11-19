@@ -57,6 +57,10 @@ body a:hover{
     text-decoration: underline;
 }
 
+img {
+    max-width: 100%;
+}
+
 .bio{
     column-count: 3;
     column-gap: 2em;
@@ -69,6 +73,7 @@ body a:hover{
 
 .bio img{
     padding: 2%;
+    background-color: #fff;
     box-shadow: 1px 1px 1px blueviolet;
 }
 
@@ -89,13 +94,15 @@ hr{
     max-width: 890px;
     min-width: 300px;
     width: 50vw;
-    margin: 3em 0em 2em 0em;
+    margin: 3em auto 2em auto;
     border: none;
     border-bottom: dotted 3px rgb(200, 200, 200);
 }
 
-title{
+a[href="#top"] {
     text-shadow: 5px 5px 5px blueviolet;
+}
+a[href="#top"]:hover {
     text-decoration: none;
 }
 
@@ -109,7 +116,6 @@ a:visited{
 }
 
 a:hover{
-    text-decoration: none;
     color: whitesmoke;
 }
 
@@ -151,11 +157,14 @@ header li a {
 
 header li a:hover{
     border-top: 4px solid hotpink;
+    text-decoration: none;
 }
 
 h1{
+    color: rgba(0,0,0,0);
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,5,19,1) 26%, rgba(142,15,204,1) 69%, rgba(255,0,176,1) 100%);
+    background-clip: text;
 }
 
 /*
@@ -164,6 +173,7 @@ Table values and settings
 
 table{
     border-collapse: collapse;
+    caption-side: bottom;
 }
 
 td, th {
@@ -220,6 +230,11 @@ input[type="radio"] ~li{
     padding: 0%;
 }
 
+form fieldset ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 /*
 font styles
 */
@@ -230,9 +245,9 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Libre BaskerVille';
+    font-family: 'Libre BaskerVille', serif;
 }
 
 body{
-    font-family: 'Space Mono';
+    font-family: 'Space Mono', monospace;
 }
