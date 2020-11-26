@@ -82,6 +82,34 @@ iframe{
     border-radius: 2em 2em;
 }
 
+div.favourites{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.favourites label{
+    order: -1;
+}
+
+div.favourites div{
+    display: none;
+}
+
+div.favourites input:checked + label + div + h3{
+    color: maroon;
+    font: none;
+}
+
+div.favourites input:checked + label + div{
+    display:flex;
+    width: 100%;
+}
+
+div.favourites input[type="radio"]{
+    display: none;
+}
+
+
 /*
 sets the footer styling with the dashed line, margins and width
 */
@@ -101,10 +129,16 @@ hr{
 
 a[href="#top"] {
     text-shadow: 5px 5px 5px blueviolet;
+    position: sticky;
+    left: -25px;
+    bottom: 10px;
+    display: inline-block;
 }
 a[href="#top"]:hover {
     text-decoration: none;
+    transform: rotate(45deg);
 }
+
 
 
 /*
@@ -139,10 +173,12 @@ header nav {
 header ul {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-content: center;
 }
 
 header li{
-    display: inline;
+    list-style: none;
 }
 
 header li a {
