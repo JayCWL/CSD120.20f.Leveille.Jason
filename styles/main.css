@@ -74,6 +74,7 @@ img {
 }
 
 .bio a{
+    display: block;
     position: relative;
 }
 
@@ -88,7 +89,7 @@ img {
     box-shadow: none;
     position: absolute;
     width: 20%;
-    bottom: 1000%;
+    top: -17px;
     right: -5%;
 }
 
@@ -99,7 +100,7 @@ iframe{
 div.favourites{
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 4%;
 }
 
 div.favourites label{
@@ -110,7 +111,8 @@ div.favourites div{
     display: none;
 }
 
-div.favourites label:active{
+div.favourites label:active,
+div.favourites input:checked + label {
     color: maroon;
     font-style: none;
 }
@@ -145,7 +147,7 @@ hr{
 a[href="#top"] {
     text-shadow: 5px 5px 5px blueviolet;
     position: sticky;
-    left: -25px;
+    margin-left: -25px;
     bottom: 10px;
     display: inline-block;
 }
@@ -189,7 +191,7 @@ header ul {
     margin: 0;
     padding: 0;
     display: flex;
-    align-content: center;
+    justify-content: center;
 }
 
 header li{
@@ -309,8 +311,8 @@ Gallery styles
 
 div.gallery{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
 
 div.gallery img{
@@ -321,11 +323,11 @@ div.gallery img{
 }
 
 div.gallery a.row-span-2{
-    grid-row: 2;
+    grid-row: span 2;
 }
 
 div.gallery a.col-span-2{
-    grid-column: 2;
+    grid-column: span 2;
 }
 
 div.gallery a:hover{
