@@ -250,6 +250,34 @@ tbody tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+@media screen and (max-width: 530px){
+    table{
+        caption-side: top;
+    }
+    thead th,
+    thead td,
+    tfoot th,
+    tfoot td{
+        display: none;
+    }
+    td, th {
+        display: block;
+        padding: 0 1rem 0 1rem;
+    }
+    td:first-of-type{
+        padding-top: 0.3em;
+        font-weight: bold;
+    }
+    td:last-of-type{
+        padding-bottom: 0.3em;
+        font-style: italic;
+        font-size: 0.8em;
+    }
+    td:last-of-type::after{
+        content:" Hours/Week"
+    }
+}
+
 /*
 survey CSS.
 */
@@ -332,4 +360,10 @@ div.gallery a.col-span-2{
 
 div.gallery a:hover{
     scale: 1.1;
+}
+
+@media screen and (max-width: 420px){
+    div.gallery a.col-span-2{
+        grid-column: 1;
+    }
 }
