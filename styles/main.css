@@ -126,6 +126,14 @@ div.favourites input[type="radio"]{
     display: none;
 }
 
+@media screen and (max-width: 800px){
+    div.favourites{
+        flex-direction: column;
+    }
+    div.favourites label{
+        order: 0;
+    }
+}
 
 /*
 sets the footer styling with the dashed line, margins and width
@@ -154,6 +162,7 @@ a[href="#top"] {
 a[href="#top"]:hover {
     text-decoration: none;
     transform: rotate(45deg);
+    transition: 0.5s;
 }
 
 
@@ -161,6 +170,10 @@ a[href="#top"]:hover {
 /*
 Header style, Sets headers to inline and link effects such as colour and hover effects.
 */
+
+header input, header label{
+    display: none;
+}
 
 a:visited{
     color: rgb(21, 185, 117);
@@ -214,10 +227,57 @@ header li a:hover{
 }
 
 h1{
-    color: rgba(0,0,0,0);
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,5,19,1) 26%, rgba(142,15,204,1) 69%, rgba(255,0,176,1) 100%);
     background-clip: text;
+}
+
+@media screen and (max-width: 500px){
+    header ul{
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+    }
+    header nav{
+        padding-top: 0.5em;
+    }
+    header li a:hover{
+        border-top: none;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 500px){
+    label.sandwich-icon{
+        display: block;
+        width: 40px;
+        height: 25px;
+        border-top: 5px solid crimson;
+        margin: 1em auto 1em auto;
+        cursor: pointer;
+        position: relative;
+    }
+    label.sandwich-icon::after{
+        content: "";
+        width: 40px;
+        display: block;
+        border-top: 5px solid crimson;
+        position: absolute;
+        margin-top: 15px;
+    }
+    label.sandwich-icon::before{
+        content: "";
+        width: 40px;
+        display: block;
+        border-top: 5px solid crimson;
+        position: absolute;
+        margin-top: 5px;
+    }
+    input:checked + label.sandwich-icon + ul{
+        height: 150px;
+        transition: height 200ms;
+    }
 }
 
 /*
@@ -291,7 +351,7 @@ label{
     display: block;
 }
 input[type="radio"] ~ label,
-input[type="checkbox"] ~ label {
+fieldset input[type="checkbox"] ~ label {
     display: inline;
 }
 
