@@ -158,11 +158,11 @@ a[href="#top"] {
     margin-left: -25px;
     bottom: 10px;
     display: inline-block;
+    transition: 0.5s;
 }
 a[href="#top"]:hover {
     text-decoration: none;
     transform: rotate(45deg);
-    transition: 0.5s;
 }
 
 
@@ -239,11 +239,11 @@ h1{
         height: 0;
         overflow: hidden;
     }
-    header nav{
+    header nav li a {
         padding-top: 0.5em;
+        border-top: none;
     }
     header li a:hover{
-        border-top: none;
         text-decoration: underline;
     }
 }
@@ -274,9 +274,11 @@ h1{
         position: absolute;
         margin-top: 5px;
     }
+    .sandwich-icon + ul {
+        transition: height 200ms;
+    }
     input:checked + label.sandwich-icon + ul{
         height: 150px;
-        transition: height 200ms;
     }
 }
 
@@ -314,13 +316,12 @@ tbody tr:nth-child(even) td {
     table{
         caption-side: top;
     }
-    thead th,
-    thead td,
-    tfoot th,
-    tfoot td{
+    thead,
+    tfoot,
+    th{
         display: none;
     }
-    td, th {
+    td {
         display: block;
         padding: 0 1rem 0 1rem;
     }
@@ -418,8 +419,11 @@ div.gallery a.col-span-2{
     grid-column: span 2;
 }
 
+div.gallery a {
+    transition: transform 200ms;
+}
 div.gallery a:hover{
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 420px){
